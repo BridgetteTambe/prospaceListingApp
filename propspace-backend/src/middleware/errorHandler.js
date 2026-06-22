@@ -4,9 +4,9 @@ export const notFound = (req, res, next) => {
   next(new Error(`Route not found - ${req.originalUrl}`));
 };
 
-// Central error handler. Express 5 forwards rejected async handlers here automatically.
+
 export const errorHandler = (err, req, res, next) => {
-  // Prefer an explicit status from the service layer (ApiError), else infer.
+ 
   let statusCode = err.statusCode || (res.statusCode === 200 ? 500 : res.statusCode);
   let message = err.message;
 

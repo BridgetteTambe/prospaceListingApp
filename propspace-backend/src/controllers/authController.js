@@ -1,6 +1,6 @@
 import * as authService from '../services/authService.js';
 
-// Controller layer — HTTP only: read req, call service, send response.
+
 
 export const register = async (req, res) => {
   const result = await authService.register(req.body);

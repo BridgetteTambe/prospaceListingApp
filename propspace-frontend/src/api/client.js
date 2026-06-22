@@ -8,9 +8,7 @@ const api = axios.create({
 export const TOKEN_KEY = 'propspace_token';
 export const USER_KEY = 'propspace_user';
 
-// BP #3 — REQUEST INTERCEPTOR
-// Attach the JWT to every outbound request in one place, so no component
-// ever has to remember to set the Authorization header itself.
+
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem(TOKEN_KEY);
   if (token) {

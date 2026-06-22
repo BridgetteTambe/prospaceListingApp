@@ -1,6 +1,6 @@
 import * as propertyService from '../services/propertyService.js';
 
-// Controller layer — HTTP + transport (socket emits). No business logic here.
+
 
 export const getProperties = async (req, res) => {
   res.json(await propertyService.list(req.query));

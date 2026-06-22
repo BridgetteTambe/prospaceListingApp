@@ -1,6 +1,6 @@
 import Property from '../models/Property.js';
 
-// Data Repository Layer — direct model/DB access only.
+
 
 export const create = (data) => Property.create(data);
 
